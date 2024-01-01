@@ -1,0 +1,6 @@
+@keyframes rotateGradient {
+    to { 
+        transform: rotate(360deg);
+        background-position: 100% 50%;
+    }
+  }
