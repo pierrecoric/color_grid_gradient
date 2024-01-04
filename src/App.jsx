@@ -2,19 +2,19 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Cells from './Cells'
+import Cells from './assets/components/Cells.jsx'
 
 function App() {
 
-  let cols = 8;
-  let rows = 20;
+  let amountCols = 7;
+  let amountRows = 200;
   let amountColors = 3;
 
-  let randomArrayCells_1 = populate2DArray(cols, rows, amountColors, generate2DArray(cols, rows, 0));
-  let randomArrayCells_2 = generateDifferentArray(cols, rows, randomArrayCells_1);
+  let randomArrayCells_1 = populate2DArray(amountCols, amountRows, amountColors, generate2DArray(amountCols, amountRows, 0));
+  let randomArrayCells_2 = generateDifferentArray(amountCols, amountRows, randomArrayCells_1);
 
-  let randomArrayCells_3 = populate2DArray(cols, rows, amountColors, generate2DArray(cols, rows, 0));
-  let randomArrayCells_4 = generateDifferentArray(cols, rows, randomArrayCells_3);
+  let randomArrayCells_3 = populate2DArray(amountCols, amountRows, amountColors, generate2DArray(amountCols, amountRows, 0));
+  let randomArrayCells_4 = generateDifferentArray(amountCols, amountRows, randomArrayCells_3);
 
   console.log(randomArrayCells_1);
   console.log(randomArrayCells_2);
@@ -101,12 +101,12 @@ function App() {
 
   //generate all the cells 
   let allCells = [];
-  for (let y = 0; y < rows; y++) {
-    for (let x = 0; x < cols; x++) {
+  for (let y = 0; y < amountRows; y++) {
+    for (let x = 0; x < amountCols; x++) {
       allCells.push(
         <Cells 
-          key={y*cols+x} 
-          id={`cells${y*cols+x}`} 
+          key={y*amountCols+x} 
+          id={`cells${y*amountCols+x}`} 
           col1={`${randomArrayCells_1[y][x]}`}
           col2={`${randomArrayCells_2[y][x]}`}
           col3={`${randomArrayCells_3[y][x]}`}
@@ -125,7 +125,7 @@ function App() {
 
   return (
     <>
-    <div className={`grid grid-cols-${cols} gap-0`}>
+    <div className={`grid grid-cols-${amountCols} gap-0`}>
       {allCells}
     </div>
     </>

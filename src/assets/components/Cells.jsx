@@ -16,17 +16,15 @@ function getRandomInt(min, max) {
 function Cells(props) {
     const gradientStyle1 = {
         background: `linear-gradient(45deg, ${colorValues[props.col1]}, ${colorValues[props.col2]}`,
-        backgroundSize: '100% 100%',
         //animation: 'rotateGradient 10s linear infinite',
       };
       const gradientStyle2 = {
         background: `linear-gradient(45deg, ${colorValues[props.col3]}, ${colorValues[props.col4]}`,
-        backgroundSize: '100% 100%',
         animation: `rotateGradient ${getRandomInt(1,6)}s linear infinite`,
       };
     return(
         <>
-        <div id={`${props.id}`} className={`animated-gradient h-64 flex justify-center items-center`} style={gradientStyle1}>
+        <div id={`${props.id}`} className={`animated-gradient h-[350px] flex justify-center items-center`} style={gradientStyle1}>
             <div className={`rounded-full w-[25%] h-[25%] flex justify-center items-center transition-all duration-100`} style={gradientStyle2}>
             </div>
         </div>
