@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -6,7 +6,7 @@ import Cells from './assets/components/Cells.jsx'
 
 function App() {
 
-  let amountCols = 8;
+  let amountCols = 5;
   let amountRows = 30;
   let amountColors = 3;
 
@@ -117,6 +117,8 @@ function App() {
     }
   }
 
+  
+
 
 
 
@@ -125,7 +127,7 @@ function App() {
 
   return (
     <>
-    <div className={`grid grid-cols-8 gap-0`}>
+    <div className={`grid grid-cols-5 gap-0`}>
       {allCells}
     </div>
     </>
