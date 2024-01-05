@@ -6,8 +6,8 @@ import Cells from './assets/components/Cells.jsx'
 
 function App() {
 
-  let amountCols = 7;
-  let amountRows = 200;
+  let amountCols = 8;
+  let amountRows = 30;
   let amountColors = 3;
 
   let randomArrayCells_1 = populate2DArray(amountCols, amountRows, amountColors, generate2DArray(amountCols, amountRows, 0));
@@ -125,7 +125,7 @@ function App() {
 
   return (
     <>
-    <div className={`grid grid-cols-${amountCols} gap-0`}>
+    <div className={`grid grid-cols-8 gap-0`}>
       {allCells}
     </div>
     </>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from 'react';
 
 const colorValues = ['#ffffff', '#D8DBE2', '#E3170A', '#FF9505', '#011936', '#26516C', '#000000'];
 //style={{background: `linear-gradient(${colorValues[props.col1]}, ${colorValues[props.col2]}`}}
