@@ -1,0 +1,8 @@
+The solution to make the cells response to differente window size is not the most efficient.
+They all have the same height so the idea is to just change a variable in a class for their height and do it from a higher level than inside the component.
+
+Let the user define the amount of colors and the colors.
+
+a little menu that opens and lets the user define the amount of colors and the colors themeselves
+
+Having a daily writing practice

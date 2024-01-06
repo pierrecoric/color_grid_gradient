@@ -20,26 +20,7 @@ function getRandomFloat(min, max) {
 
 function Cells(props) {
 
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
-  const cardDivRef = useRef(null);
-
-    useEffect(() => {
-      const updateDimensions = () => {
-        const divWidth = cardDivRef.current.offsetWidth;
-        let divHeight = (2/3) * divWidth;
-        setWidth(divWidth);
-        setHeight(divHeight);
-      }
-      updateDimensions();
-      window.addEventListener('resize', updateDimensions);
-      return () => {
-        window.removeEventListener('resize', updateDimensions);
-      };
-    }, []);
-
     const gradientStyle1 = {
-        height: `${height}px`,
         background: `linear-gradient(45deg, ${colorValues[props.col1]}, ${colorValues[props.col2]}`,
         //animation: 'rotateGradient 10s linear infinite', 
       };
@@ -49,7 +30,7 @@ function Cells(props) {
       };
     return(
         <>
-        <div id={`${props.id}`} className={`animated-gradient h-2 flex justify-center items-center`} style={gradientStyle1} ref={cardDivRef}>
+        <div id={`${props.id}`} className={`animated-gradient h-[15vw] flex justify-center items-center`} style={gradientStyle1}>
             <div className={`rounded-full w-[25%] h-[25%] flex justify-center items-center transition-all duration-100`} style={gradientStyle2}>
             </div>
         </div>
